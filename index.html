@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY TODO</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="add-task">
+      <h5>MY TODO APP</h5>
+    </div>
+    <div class="main-container">
+      <!-- left container -->
+      <div class="left-container">
+        <h1 class="heading">ADD TO DO</h1>
+        <div class="task-container">
+          <label for="task">Title</label>
+            <input type="text" class="input-field" name="task" id="task-name" placeholder="Title" />
+            <label for="priority">Priority</label>
+            <select name="Priority" id="priority">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+              <label for="deadline">Deadline</label>
+              <input type="date" name="deadline" id="deadline">
+              <label for="note">Special Note</label>
+              <textarea name="notes" id="notes" placeholder="Comments"></textarea>
+              <div class="btn-cnt">
+              <button type="submit" id="add-task-btn">ADD</button>
+              <button type="reset" class="reset-btn">RESET</button>
+            </div>
+        </div>
+      </div>
+
+      <!-- right containet -->
+      <div class="right-container">
+        <h2 class="heading">Getup and Complete Your Tasks</h2>
+        <!-- CARD 1 -->
+        <div class="item-card"></div>
+      </div>
+    </div>
+  </body>
+</html>
