@@ -161,7 +161,7 @@
     font-size: 16px;
     color: wheat;
     border: 1px solid white;
-    background-color: rgba(30, 155, 19, 0.89);
+    background-color: rgba(49, 47, 47, 0.89);
   }
 
 
@@ -206,6 +206,44 @@
     border-radius: 15px;
     background-color: rgba(164, 206, 188, 0.541);
  }
+
+
+ /* Table styles */
+
+ .task-table{
+  height: auto;
+  width: 80%;
+  margin-left: 60px;
+  margin-top: 30px;
+  /* border: 1px solid rgba(84, 156, 84, 0.863); */
+  border-radius: 20px;
+ }
+
+ .task-table th{
+  font-size: 30px;
+  text-align: center;
+  width: 10vh;
+  height: 10vh;
+  letter-spacing: 2px;
+  border: 4px solid rgba(84, 156, 84, 0.863);
+  /* border-right: 4px solid rgba(84, 156, 84, 0.863);
+  border-left: 4px solid rgba(84, 156, 84, 0.863);
+  border-top: 4px solid rgba(84, 156, 84, 0.863); */
+ }
+
+ .task-table tr{
+  font-size: 18px;
+  text-align: center;
+  font-family: cursive;
+  width: 10vh;
+  height: 10vh;
+ }
+
+ .task-table td{
+  /* border-bottom: 1px solid rgba(95, 136, 95, 0.712); */
+ }
+
+
 
 
 
