@@ -1,15 +1,26 @@
 function toDo() {
+
+    
+
+    document.addEventListener("DOMContentLoaded", function () {
+        toDo();
+    });
+
+
     const addButton = document.getElementById("add-task-btn");
     const resetButton = document.getElementById("reset-btn");
   
-    const todoTable = document.getElementById("task-table");
+    // const todoTable = document.getElementById("task-table");
   
-    function addTask() {
+    function addTask(e) {
+        e.preventDefault();
     
       const taskTitle = document.getElementById("task-name").value;
       const priorityInput = document.getElementById("priority").value;
       const deadlineInput = document.getElementById("deadline").value;
       const commentInput = document.getElementById("comment").value;
+
+      const todoTable = document.getElementById(".task-table");
   
       
       if (taskTitle === "" || deadlineInput === "" || commentInput === "") {
@@ -29,8 +40,6 @@ function toDo() {
       
      
       todoTable.appendChild(newRow);
-  
-      
       resetForm();
     }
   
@@ -42,9 +51,9 @@ function toDo() {
     }
   
    
-    addButton.addEventListener("click", function (e) {
-      e.preventDefault();
+    addButton.addEventListener("click", function () {
       addTask();
+      
     });
   
    
