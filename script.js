@@ -1,64 +1,55 @@
-document.addEventListener("DOMContentLoaded", function () {
+function toDo() {
     const addButton = document.getElementById("add-task-btn");
-    const resetButton = document.querySelector(".reset-btn");
-    const taskNameInput = document.getElementById("task-name");
-    const priorityInput = document.getElementById("priority");
-    const deadlineInput = document.getElementById("deadline");
-    const notesInput = document.getElementById("notes");
-    const taskTable = document.querySelector(".task-table");
+    const resetButton = document.getElementById("reset-btn");
   
-
+    const todoTable = document.getElementById("task-table");
+  
     function addTask() {
-      const taskName = taskNameInput.value;
-      const priority = priorityInput.value;
-      const deadline = deadlineInput.value;
-      const notes = notesInput.value;
+    
+      const taskTitle = document.getElementById("task-name").value;
+      const priorityInput = document.getElementById("priority").value;
+      const deadlineInput = document.getElementById("deadline").value;
+      const commentInput = document.getElementById("comment").value;
   
-      if (taskName === "" || deadline === "") {
-        alert("Please fill in all the required fields.");
+      
+      if (taskTitle === "" || deadlineInput === "" || commentInput === "") {
+        alert("Please fill all details...!");
         return;
       }
   
-
+     
       const newRow = document.createElement("tr");
-  
       newRow.innerHTML = `
-        <td>${taskName}</td>
-        <td>${priority}</td>
-        <td>${deadline}</td>
-        <td>${notes}</td>
+        <td>${taskTitle}</td>
+        <td>${priorityInput}</td>
+        <td>${deadlineInput}</td>
+        <td>${commentInput}</td>
         <td><button class="delete-btn">Delete</button></td>
       `;
+      
+     
+      todoTable.appendChild(newRow);
   
- 
-      taskTable.appendChild(newRow);
-  
-
-      const deleteButton = newRow.querySelector(".delete-btn");
-      deleteButton.addEventListener("click", function () {
-        taskTable.deleteRow(newRow.rowIndex);
-      });
-  
+      
       resetForm();
     }
   
-
     function resetForm() {
-      taskNameInput.value = "";
-      priorityInput.value = "high";
-      deadlineInput.value = "";
-      notesInput.value = "";
+      document.getElementById("task-name").value = "";
+      document.getElementById("priority").value = "high"; 
+      document.getElementById("deadline").value = "";
+      document.getElementById("comment").value = "";
     }
   
-
+   
     addButton.addEventListener("click", function (e) {
-      e.preventDefault(); 
+      e.preventDefault();
       addTask();
     });
   
-
+   
     resetButton.addEventListener("click", function () {
       resetForm();
     });
-  });
+  }
   

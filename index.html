@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MY TODO</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
   </head>
 
   <body>
@@ -34,10 +33,10 @@
           <label for="deadline">Deadline</label>
           <input type="date" name="deadline" id="deadline" />
           <label for="note">Comment</label>
-          <textarea name="notes" id="notes" placeholder="Comments"></textarea>
+          <textarea name="notes" id="comment" placeholder="Comments"></textarea>
           <div class="btn-cnt">
             <button type="submit" id="add-task-btn">ADD</button>
-            <button type="reset" class="reset-btn">RESET</button>
+            <button type="reset" id="reset-btn" class="reset-btn">RESET</button>
           </div>
         </div>
       </div>
@@ -45,21 +44,18 @@
       <!-- right containet -->
       <div class="right-container">
         <h2 class="heading">Getup and Complete Your Tasks</h2>
-        <!-- CARD 1 -->
-        <!-- <div class="item-card"></div> -->
 
-        <table  class="task-table">
+        <table  class="task-table" id="task-table">
             <tr>
               <th>Title</th>
               <th>Priority</th>
               <th>Deadline</th>
               <th>Comment</th>
             </tr>
-            <tr>
-                
-            </tr>
         </table>
       </div>
     </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>
