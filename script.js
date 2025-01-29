@@ -27,9 +27,15 @@ function toDo() {
           <td>${commentInput}</td>
           <td><button class="delete-btn">Delete</button></td>
       `;
-
-   
       todoTable.appendChild(newRow);
+
+      let deleteBtn = document.querySelector('.delete-btn');
+
+      deleteBtn.addEventListener("click", function(e)
+    {
+      todoTable.removeChild(newRow);
+    });
+
       resetForm(); 
   }
 
@@ -40,6 +46,7 @@ function toDo() {
       document.getElementById("deadline").value = "";
       document.getElementById("comment").value = "";
   }
+
 
 
   addButton.addEventListener("click", function (e) {
