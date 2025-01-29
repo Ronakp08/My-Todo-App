@@ -29,11 +29,12 @@ function toDo() {
       `;
       todoTable.appendChild(newRow);
 
-      let deleteBtn = document.querySelector('.delete-btn');
+      let deleteBtn = document.querySelectorAll('.delete-btn');
 
-      deleteBtn.addEventListener("click", function(e)
-    {
-      todoTable.removeChild(newRow);
+      deleteBtn.forEach(button => {
+        button.addEventListener('click', function() {
+          todoTable.removeChild(newRow);
+        });
     });
 
       resetForm(); 
